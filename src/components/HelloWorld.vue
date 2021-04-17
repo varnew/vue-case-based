@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-      <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
     <h1>{{ lang }}</h1>
     <el-row>
       <el-button @click="changeTheme">切换主题</el-button>
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     lang() {
-      return this.$t("route.dashboard");
+      return this.$t("route.dashboard")
     },
   },
   created() {
