@@ -1,0 +1,5 @@
+$primary-color: var(--main-bg-color);
+// $--color-primary: var(--main-bg-color); // 这个会报错，因为mix接受的参数必须是color值
+@mixin test($color) {
+  color: $color;
+}
