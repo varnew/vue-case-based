@@ -2,6 +2,7 @@
   <div class="box">
     <h1>{{ msg }}</h1>
     <h1>{{ lang }}</h1>
+    <div v-for="item in arr" :key="item.name">{{ item }}</div>
     <el-row>
       <el-button @click="changeTheme">切换主题</el-button>
       <el-button @click="changeLocal">切换语言</el-button>
@@ -24,15 +25,17 @@ export default {
   data: () => {
     return {
       theme: "pink",
+      arr: [1, 2, 3],
     };
   },
   computed: {
     lang() {
-      return this.$t("route.dashboard")
+      return this.$t("route.dashboard");
     },
   },
   created() {
     this.changeTheme();
+    this.$myMethod();
   },
   methods: {
     changeTheme() {
